@@ -11,15 +11,18 @@
 
     <!-- custom tailwind styles -->
     <script>
-        tailwind.config = {
-            theme: {
-            extend: {
-                colors: {
-                clifford: '#da373d',
-                }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: '#da373d',
+              'primary': '#FF4240',
+              'secondary':'#131318',
+              'paragraph': 'rgba(19, 19, 24, 0.60)'
             }
-            }
+          }
         }
+      }
     </script>
 
     <!-- google font Manrope -->
@@ -27,7 +30,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- styles google font Manrope -->
+    <!-- custom css google font Manrope -->
     <style>
         body {
             font-family: 'Manrope', sans-serif;
@@ -36,83 +39,77 @@
 
 </head>
 <body>
-    <header>
-        <nav class="container mx-auto lg:px-24 py-2 lg:py-8">
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+    <header class="container mx-auto px-5 lg:px-32">
+      <nav class="my-4 lg:my-12">
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden p-0 pr-4">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-                      <li><a>Home</a></li>
-                      <li><a>About</a></li>
-                      <li><a>Pages</a></li>
-                      <li><a>Blog</a></li>
-                      <li><a>Contact</a></li>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-base font-normal" >
+                        <li><a class="text-primary">Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Pages</a></li>
+                        <li><a>Blog</a></li>
+                        <li><a>Contact</a></li>
                     </ul>
                   </div>
-                  <a class="btn btn-ghost text-3xl font-extrabold">Hockey<span class="text-red-500 text-3xl font-extrabold">’</span>s</a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1 text-xs font-normal">
-                    <li><a class="text-red-500 font-bold">Home</a></li>
-                    <li><a>About</a></li>
-                    <li><a>Pages</a></li>
-                    <li><a>Blog</a></li>
-                    <li><a>Contact</a></li>
-                  </ul>
-                </div>
-                <div class="navbar-end">
-                    <button class="lg:flex hidden btn btn-ghost btn-circle">
-                        <img src="Images/search icon.png" alt="">
-                    </button>
-                    <a class="btn bg-red-500 text-white">Get Ticket</a>
-              </div> 
-            </div> 
-        </nav>
-        <!-- hero -->
-        <section class="container mx-auto px-3 lg:px-24 py-8">
-            <div class="carousel w-full">
-                <!-- banner img 1 -->
-                <div id="slide1" class="carousel-item relative w-full h-[80vh] rounded-md bg-cover bg-center bg-[url(../images/1.png)]">
-                  <div class="absolute transform translate-y-[150px] translate-x-32 lg:translate-x-6 lg:translate-y-[200px] space-x-4 left-5 right-5 top-1/2">
-                    <a href="#slide4" class="btn btn-circle text-white bg-black border-0">❮</a> 
-                    <a href="#slide2" class="btn btn-circle text-white bg-black border-0">❯</a>
-                  </div>
-                </div>
-                <!-- banner img 2 -->
-                <div id="slide2" class="carousel-item relative w-full h-[80vh] rounded-md bg-cover bg-center bg-[url(images/2.png)]">
-                  <div class="absolute transform translate-y-[150px] translate-x-32 lg:translate-x-6 lg:translate-y-[200px] space-x-4 left-5 right-5 top-1/2">
-                    <a href="#slide1" class="btn btn-circle text-white bg-black border-0">❮</a> 
-                    <a href="#slide3" class="btn btn-circle text-white bg-black border-0">❯</a>
-                  </div>
-                </div>
-                <!-- banner img 3 -->
-                <div id="slide3" class="carousel-item relative w-full h-[80vh] rounded-md bg-cover bg-center bg-[url(images/3.png)]">
-                  <div class="absolute transform translate-y-[150px] translate-x-32 lg:translate-x-6 lg:translate-y-[200px] space-x-4 left-5 right-5 top-1/2">
-                    <a href="#slide2" class="btn btn-circle text-white bg-black border-0">❮</a> 
-                    <a href="#slide4" class="btn btn-circle text-white bg-black border-0">❯</a>
-                  </div>
-                </div>
-                <!-- banner 4 -->
-                <div id="slide4" class="carousel-item relative w-full h-[80vh] rounded-md bg-cover bg-center bg-[url(images/4.png)] flex items-center justify-center">
-                  <div class="absolute transform translate-y-[150px] translate-x-32 lg:translate-x-6 lg:translate-y-[200px] space-x-4 left-5 right-5 top-1/2">
-                    <a href="#slide3" class="btn btn-circle bg-black border-0 text-white">❮</a> 
-                    <a href="#slide1" class="btn btn-circle text-white bg-black border-0">❯</a>
-                  </div>
-                </div>
-              </div>
-            <div class="w-[66vh] lg:w-2/5 h-[20vh] bg-black rounded-xl p-4 absolute transform lg:p-6 lg:-translate-y-44 lg:translate-x-[666px]">
-                <h2 class="text-white text-lg lg:text-2xl font-extrabold">Meet all the heroes from the field</h2>
-                <p class="text-gray-400 text-sm lg:text-base opacity-90">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p>
+                <h2 class=" text-2xl lg:text-4xl font-extrabold">Hockey<span class="text-primary">'</span>s</h2>
             </div>
-        </section>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1 text-base font-normal">
+                <li><a class="text-primary">Home</a></li>
+                <li><a>About</a></li>
+                <li><a>Pages</a></li>
+                <li><a>Blog</a></li>
+                <li><a>Contact</a></li>
+              </ul>
+            </div>
+            <div class="navbar-end flex items-center gap-3">
+                <i class="fa-solid fa-magnifying-glass invisible lg:visible" style="color: #292929;"></i>
+              <a class="btn btn-primary bg-primary text-sm lg:text-xl text-white border-0 font-bold">Get Ticket</a>
+            </div>
+          </div>
+    </nav>
+    <!-- hero -->
+    <section class="lg:relative">
+      <div class="carousel w-full lg:max-h-[566px]">
+        <!-- slide 1 -->
+          <div id="slide1" class="carousel-item relative w-full">
+            <img src="Images/1.png" class="w-full" />
+            <div class="absolute transform translate-x-32 translate-y-12 lg:translate-x-3 lg:translate-y-52 space-x-3 left-5 right-5 top-1/2">
+              <a href="#slide3" class="btn btn-circle text-white bg-black border-0">❮</a> 
+              <a href="#slide2" class="btn btn-circle text-white bg-black border-0">❯</a>
+            </div>
+          </div> 
+          <!-- slide 2 -->
+          <div id="slide2" class="carousel-item relative w-full">
+            <img src="Images/2.png" class="w-full" />
+            <div class="absolute transform translate-x-32 translate-y-12 lg:translate-x-3 lg:translate-y-52 space-x-3 left-5 right-5 top-1/2">
+              <a href="#slide1" class="btn btn-circle text-white bg-black border-0">❮</a> 
+              <a href="#slide3" class="btn btn-circle text-white bg-black border-0">❯</a>
+            </div>
+          </div>
+          <!-- slide 3 --> 
+          <div id="slide3" class="carousel-item relative w-full">
+            <img src="Images/3.png" class="w-full" />
+            <div class="absolute transform translate-x-32 translate-y-12 lg:translate-x-3 lg:translate-y-52 space-x-3 left-5 right-5 top-1/2">
+              <a href="#slide2" class="btn btn-circle text-white bg-black border-0">❮</a> 
+              <a href="#slide1" class="btn btn-circle text-white bg-black border-0">❯</a>
+            </div>
+          </div> 
+        </div>
+        <div class="lg:absolute bottom-8 right-8 bg-secondary p-8 mt-4 lg:mt-0 text-white lg:max-w-[550px] rounded-2xl">
+          <h4 class="text-2xl font-extrabold pb-4">Meet all the heroes from the field</h4>
+          <p class="text-base font-medium">Discover the inspiring stories of all the hockey heroes who have left an indelible mark in the field.</p>
+        </div>
+      </section>
     </header>
 
-    <main>
+    <main class="container mx-auto lg:px-24 lg:py-8">
         <!-- Professional Hockeys Club -->
-        <section class="container mx-auto pt-24 lg:px-24 lg:py-8">
+        <section class=" pt-10">
             <div class="flex justify-center items-center py-8">
                 <div class="px-8 lg:w-3/6 text-center space-y-5">
                     <h1 class="text-4xl font-extrabold">Professional Hockeys Club</h1>
@@ -176,7 +173,7 @@
         </section>
 
         <!-- Program Sections -->
-        <section class="container mx-auto pt-24 lg:px-24 lg:py-8">
+        <section>
             <div>
                 <div class="flex justify-center items-center py-8">
                     <div class="px-8 lg:w-3/6 text-center space-y-5">
